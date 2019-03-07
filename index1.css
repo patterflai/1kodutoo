@@ -1,9 +1,57 @@
+.body{
+display: block;
+margin: 0 auto;
+text-align: center;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-weight: bold;
 
-p {
-  font-size: 120;
 }
-#clockContainer{
-  width:100%;
-  margin-top: 200;
-  background-color: #eee;
+
+#clock{
+	left: 20%;
+	right: 75%;
 }
+.clock {
+	width: auto;
+	height: auto;
+	position: relative;/*static relative   absolute  fixed*/
+}
+
+.clock *{
+	position: absolute;
+}
+
+.clockhand {
+	left: 535px;
+	top: 100px;
+  transform-origin: 50% 176px;
+}
+.numbrilaud{
+	top: 90px;
+	left: 370px;
+}
+.pendulus {
+	left: 465px;
+	top: 420px;
+	transform-origin: 50% 0%;
+  animation: pend 1s ease-in-out infinite alternate;
+}
+@keyframes pend {
+  0%{transform: rotate(30deg);}
+  100%{transform: rotate(-30deg);}
+
+}
+/*.hour{
+  animation: spin 3600s linear infinite;
+}
+.minute{
+  animation: spin 120s linear infinite;
+}
+.second{
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0%{transform: rotate(0deg); }
+  100%{transform: rotate(360deg);}
+}
+*/
